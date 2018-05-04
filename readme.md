@@ -60,7 +60,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 ##public 
 入口文件 
 静态文件
-##resources
+##resourcesss
 自带静态文件 语言文件 页面（V层）
 ##routes
 路由文件
