@@ -9,16 +9,16 @@ class RouteServiceProvider extends ServiceProvider
 {
     /**
      * This namespace is applied to your controller routes.
-     *
+     * 此命名空间应用于控制器路由。
      * In addition, it is set as the URL generator's root namespace.
-     *
+     * 此外，它被设置为URL生成器的根命名空间。
      * @var string
      */
     protected $namespace = 'App\Http\Controllers';
 
     /**
      * Define your route model bindings, pattern filters, etc.
-     *
+     * 定义路由模型绑定、模式过滤器等。
      * @return void
      */
     public function boot()
@@ -30,7 +30,7 @@ class RouteServiceProvider extends ServiceProvider
 
     /**
      * Define the routes for the application.
-     *
+     * 定义应用程序的路由。
      * @return void
      */
     public function map()
@@ -44,9 +44,9 @@ class RouteServiceProvider extends ServiceProvider
 
     /**
      * Define the "web" routes for the application.
-     *
+     * 定义应用程序的“Web”路由。
      * These routes all receive session state, CSRF protection, etc.
-     *
+     * 这些路由都接收会话状态、CSRF保护等。
      * @return void
      */
     protected function mapWebRoutes()
@@ -58,9 +58,9 @@ class RouteServiceProvider extends ServiceProvider
 
     /**
      * Define the "api" routes for the application.
-     *
+     * 定义应用程序的“API”路由。
      * These routes are typically stateless.
-     *
+     * 这些路由通常是无状态的。
      * @return void
      */
     protected function mapApiRoutes()
