@@ -49,14 +49,25 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
-##App11
-应用层目录
+##App
+应用核心目录（编写代码的目录）
 ##bootstrap
-?
+框架启动和载入配置 缓存文件
 ##config
 配置文件
+* app.php
+* auth.php
+* broadcasting.php
+* cache.php 缓存配置
+* database.php 数据库配置
+* filesystems.php
+* mail.php 邮箱配置
+* queue.php 对列
+* services.php 服务器配置？ 
+* session.php session配置
+* view.php 视图配置
 ##database
-数据库迁移什么的
+数据库迁移和填充文件（不知道做什么的）
 ##public 
 入口文件 
 静态文件
@@ -64,9 +75,19 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 自带静态文件 语言文件 页面（V层）
 ##routes
 路由文件
+* web.php 包含的路由都会应用web中间间组，具备session Csrf防护和cookie加密功能，如果应用无需提供无状态的restfulf风格的api,所有路由都会定义在web.php文件
+*api.php 应用了api中间件，具备频率限制功能，这些路有时无状态，访问时
+需要通过token进行认证并且不能访问session状态
+* console.php 定义所有基于闭包的控制台命令， 每个闭包都被绑定到
+一个控制台命令并且允许命令io方法进行交互？
+* channels.php 文件用于注册应用支持的所有事件广播频道。?
 ##storage
-？
+编译后的blade模板 基于文件的session 文件缓存 其他框架生成的文件
+* app 存放应用生成的文件
+* framework 存放框架生成的文件和缓存
+* logs 存放应用的日志文件
+
 ##tests11
-单元测试
+自动化测试文件， php vendor/bin/phpunit
 ##vendor11
-扩展文件
+包含了应用所有通过composer加载的依赖
