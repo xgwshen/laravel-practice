@@ -8,7 +8,7 @@
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
-|
+|这里是您可以注册应用程序的Web路由的地方。这些路由被一个包含“Web”中间件组里的RouteService提供程序加载。现在创造伟大的东西！
 */
 /**
  * 我们可以注册路由来响应任何 HTTP 请求动作：
