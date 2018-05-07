@@ -31,7 +31,7 @@ Route::get('/x', function () {
 Route::get('hello',function(){
     return "hello world !";
 });
-Route::get('/user',"UsersController@index");
+//Route::get('/user',"UsersController@index");
 
 Route::post('basic2',function(){
     return 'basic2 post';//不能通过url直接访问
@@ -44,3 +44,18 @@ Route::match(['get','post'],'multy1',function(){
 Route::any('multy2',function(){
     return 'multy2';
 });
+
+//路由参数
+//不加默认值
+Route::get('user/{id}',function($id){
+    return 'user-id-'.$id;
+});
+//加默认值
+Route::get('user/{name?}',function($name='sean'){
+    return 'user-name-'.$name;
+});
+//多参数加正则
+Route::get('user/{id}/{name}',function($id,$name){
+    return 'user-id-'.$id.'-name-'.$name;
+})->where(['id'=>'[0-9]+','name'=>'[A-Za-z]+']);
+
