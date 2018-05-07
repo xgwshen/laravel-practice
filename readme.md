@@ -94,5 +94,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 自动化测试文件， php vendor/bin/phpunit
 ##vendor11
 包含了应用所有通过composer加载的依赖
+
 文件.user.ini有什么用？ 删掉后又会怎样？ 是怎么生成的 ？ 和 .htacess文件的区别是什么？
+
+LNMP 1.2及更高版本防跨目录功能使用.user.ini，该文件在网站根目录下，可以修改.user.ini 里面的open_basedir的值来设置限制访问的目录或删除来移除防跨目录的设置。
 
