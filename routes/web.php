@@ -84,3 +84,14 @@ Route::group(['prefix'=>'member'],function(){
 Route::get('view', function(){
     return view('welcome');
 });
+
+//二 、路由与控制器
+
+//1.直接映射到控制器的方法
+//Route::get('member/info','MemberController@info');
+
+//2.第二个参数用数组的方式表示
+//Route::any('member/info', ['uses'=>'MemberController@info']);
+
+// 绑定参数 及参数限制
+Route::get('member/{id}', 'MemberController@info')->where('id','\d+');
