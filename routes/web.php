@@ -60,6 +60,18 @@ Route::any('multy2',function(){
 //})->where(['id'=>'[0-9]+','name'=>'[A-Za-z]+']);
 
 //路由别名
-Route::get('user/member-center',['as' => 'center' , function(){
-    return route('center');//返回完整路径
-}]);
+//Route::get('user/member-center',['as' => 'center' , function(){
+//    return route('center');//返回完整路径
+//}]);
+
+//路由群组
+Route::group(['prefix'=>'member'],function(){
+    //前缀路由
+    Route::get('user/member-center',['as' => 'center' , function(){
+        return route('center');//返回完整路径
+    }]);
+
+    Route::any('multy2',function(){
+        return 'member-multy2';
+    });
+});
