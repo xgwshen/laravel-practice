@@ -94,3 +94,5 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 自动化测试文件， php vendor/bin/phpunit
 ##vendor11
 包含了应用所有通过composer加载的依赖
+文件.user.ini有什么用？ 删掉后又会怎样？ 是怎么生成的 ？ 和 .htacess文件的区别是什么？
+
