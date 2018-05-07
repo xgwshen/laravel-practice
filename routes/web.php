@@ -27,6 +27,7 @@ Route::get('/', function () {
 Route::get('/x', function () {
     return view('index');
 });
+//基础路由
 Route::get('hello',function(){
     return "hello world !";
 });
@@ -34,4 +35,12 @@ Route::get('/user',"UsersController@index");
 
 Route::post('basic2',function(){
     return 'basic2 post';//不能通过url直接访问
+});
+
+//多请求路由
+Route::match(['get','post'],'multy1',function(){
+    return 'multy1';
+});
+Route::any('multy2',function(){
+    return 'multy2';
 });
