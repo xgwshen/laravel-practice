@@ -47,15 +47,19 @@ Route::any('multy2',function(){
 
 //路由参数
 //不加默认值
-Route::get('user/{id}',function($id){
-    return 'user-id-'.$id;
-});
-//加默认值
-Route::get('user/{name?}',function($name='sean'){
-    return 'user-name-'.$name;
-});
-//多参数加正则
-Route::get('user/{id}/{name}',function($id,$name){
-    return 'user-id-'.$id.'-name-'.$name;
-})->where(['id'=>'[0-9]+','name'=>'[A-Za-z]+']);
+//Route::get('user/{id}',function($id){
+//    return 'user-id-'.$id;
+//});
+////加默认值
+//Route::get('user/{name?}',function($name='sean'){
+//    return 'user-name-'.$name;
+//});
+////多参数加正则
+//Route::get('user/{id}/{name}',function($id,$name){
+//    return 'user-id-'.$id.'-name-'.$name;
+//})->where(['id'=>'[0-9]+','name'=>'[A-Za-z]+']);
 
+//路由别名
+Route::get('user/member-center',['as' => 'center' , function(){
+    return route('center');//返回完整路径
+}]);
