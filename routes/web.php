@@ -27,4 +27,11 @@ Route::get('/', function () {
 Route::get('/x', function () {
     return view('index');
 });
+Route::get('hello',function(){
+    return "hello world !";
+});
 Route::get('/user',"UsersController@index");
+
+Route::post('basic2',function(){
+    return 'basic2 post';//不能通过url直接访问
+});
