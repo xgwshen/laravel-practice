@@ -7,6 +7,8 @@
  */
 namespace App\Http\Controllers;
 
+use App\Member;
+
 class MemberController extends Controller
 {
     /**
@@ -18,9 +20,16 @@ class MemberController extends Controller
     public function info($id){
 //        return 'member-info-id-' .$id ;
 //        return route('memberinfo');
-        return view('member/info', [
-            'name'=> 'xgwshen',
-            'age' => '25',
-        ]);
+//        return view('member/info', [
+//            'name'=> 'xgwshen',
+//            'age' => '25',
+//        ]);
+
+        //调用member模型 静态方法直接调用
+//        return Member::getMember();
+
+        //调用member模型 非静态方法 实例化对象调用(自测)
+        $Member =  new Member();
+        return $Member->getMember1();
     }
 }
