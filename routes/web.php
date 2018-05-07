@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * 路由的概念：
+ *  1. 简单说就是把用户的请求转发给相应的程序进行处理
+ *  2. 作用是建立 url 和 程序 间的映射
+ */
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,7 +31,7 @@ Route::get('/', function () {
 Route::get('/x', function () {
     return view('index');
 });
-//基础路由
+//1.基础路由
 Route::get('hello',function(){
     return "hello world !";
 });
@@ -37,7 +41,7 @@ Route::post('basic2',function(){
     return 'basic2 post';//不能通过url直接访问
 });
 
-//多请求路由
+//2.多请求路由
 Route::match(['get','post'],'multy1',function(){
     return 'multy1';
 });
@@ -45,7 +49,7 @@ Route::any('multy2',function(){
     return 'multy2';
 });
 
-//路由参数
+//3.路由参数
 //不加默认值
 //Route::get('user/{id}',function($id){
 //    return 'user-id-'.$id;
@@ -59,12 +63,12 @@ Route::any('multy2',function(){
 //    return 'user-id-'.$id.'-name-'.$name;
 //})->where(['id'=>'[0-9]+','name'=>'[A-Za-z]+']);
 
-//路由别名
+//4.路由别名
 //Route::get('user/member-center',['as' => 'center' , function(){
 //    return route('center');//返回完整路径
 //}]);
 
-//路由群组
+//5.路由群组
 Route::group(['prefix'=>'member'],function(){
     //前缀路由
     Route::get('user/member-center',['as' => 'center' , function(){
@@ -74,4 +78,9 @@ Route::group(['prefix'=>'member'],function(){
     Route::any('multy2',function(){
         return 'member-multy2';
     });
+});
+
+//7.路由中输出视图
+Route::get('view', function(){
+    return view('welcome');
 });
