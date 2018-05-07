@@ -91,7 +91,10 @@ Route::get('view', function(){
 //Route::get('member/info','MemberController@info');
 
 //2.第二个参数用数组的方式表示
-//Route::any('member/info', ['uses'=>'MemberController@info']);
+//Route::any('member/info', [
+//    'uses'=>'MemberController@info',
+//    'as' => 'memberinfo'
+//]);
 
 // 绑定参数 及参数限制
 Route::get('member/{id}', 'MemberController@info')->where('id','\d+');
