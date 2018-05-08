@@ -94,4 +94,7 @@ class StudentController extends Controller
         var_dump($num);//NULL
     }
 
+    /**
+     * 使用查询构造器 查询数据
+     */
 }
