@@ -98,3 +98,5 @@ Route::get('view', function(){
 
 // 绑定参数 及参数限制
 Route::get('member/{id}', 'MemberController@info')->where('id','\d+');
+
+Route::any('test1','StudentController@test1');
