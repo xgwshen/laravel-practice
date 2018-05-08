@@ -96,5 +96,15 @@ class StudentController extends Controller
 
     /**
      * 使用查询构造器 查询数据
+     * get() 获取全部数据
+     * first() 获取结果集中的第一条
+     * where() 条件 whereRaw('...',['','']) 多个条件
+     * pluck() 返回指定字段
+     * lists() 返回字段与字段组合的数组
+     * select() 查询指定字段
+     * chunk(count,function($result){... } ) 分块查询 直到查完为止
      */
+    public function query4(){
+
+    }
 }

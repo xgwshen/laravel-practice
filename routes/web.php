@@ -103,3 +103,4 @@ Route::any('test1','StudentController@test1');
 Route::any('query1','StudentController@query1');
 Route::any('query2','StudentController@query2');
 Route::any('query3','StudentController@query3');
+Route::any('query4','StudentController@query4');
