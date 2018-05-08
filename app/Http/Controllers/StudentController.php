@@ -7,6 +7,7 @@
  */
 namespace App\Http\Controllers;
 
+use App\Student;
 use Illuminate\Support\Facades\DB;
 
 class StudentController extends Controller
@@ -163,8 +164,34 @@ class StudentController extends Controller
 
     /**
      * eloquent ORM
+     * all() 查询所有数据，返回集合
+     * find()  根据主键进行查询
+     * findOrFail() 根据主键查找， 没查到返回异常
      */
     public function orm1(){
+        //all()
+//        $students = Student::all();
+
+        //find() 返回一个对象
+//        $students = Student::find(4);
+
+        //findOrFail()
+//        $students =Student::findOrFail(6);
+
+        //查询构造器在orm中的使用
+//        $students = Student::get();
+//        $students = Student::where('id','>',3)->orderBy('age','desc')->first();
+//        Student::chunk(2,function($students){
+//            var_dump($students);
+//        });
+        //聚合函数
+//        $num = Student::count();
+//        $max = Student::max('age');
+//        $sum =Student::sum('age');
+//        $min =Student::min('age');
+//        $avg =Student::avg('age');
+//        dd($min);
+
 
     }
 }
