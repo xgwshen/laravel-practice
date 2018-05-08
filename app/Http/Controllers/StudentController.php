@@ -19,8 +19,8 @@ class StudentController extends Controller
     public function test1(){
         //return 'test1';
         //原始查询 db facades 返回数组
-//        $students=DB::select('select * from student');
-//        dd($students);//dd 自带打印数据函数
+        $students=DB::select('select * from student');
+        dd($students);//dd 自带打印数据函数
 
         //原始新增  返回boolean值
 //        $bool = DB::insert('insert into student(name,age) values(?, ?)',
@@ -31,8 +31,8 @@ class StudentController extends Controller
 //        $num=DB::update('update student set age= ? where name= ?',['20', 'xgwshen']);
 //        var_dump($num);
         //删除 返回删除的行数
-        $num = DB::delete('delete from student where id = ?', [1001]);
-        dd($num);
+//        $num = DB::delete('delete from student where id = ?', [1001]);
+//        dd($num);
     }
 
     /**
@@ -95,16 +95,35 @@ class StudentController extends Controller
     }
 
     /**
-     * 使用查询构造器 查询数据
+     * 使用查询构造器 查询数据 返回的是对象而不是数组 用toArray方法把对象转化为数组 但是里面的元素还是对象。。。？
      * get() 获取全部数据
      * first() 获取结果集中的第一条
      * where() 条件 whereRaw('...',['','']) 多个条件
-     * pluck() 返回指定字段
-     * lists() 返回字段与字段组合的数组
+     * pluck() 返回指定字段 5.3以后代替了lists()方法
+     * lists() 返回字段与字段组合的数组 5.3以后被废弃了
      * select() 查询指定字段
      * chunk(count,function($result){... } ) 分块查询 直到查完为止
      */
     public function query4(){
+        //get()
+//        $students = DB::table('student')->get()->toArray();
+//        dd($students);
+        //first()
+//        $students = DB::table('student')->orderBy('id','desc')->first();
+        //where
+//        $students = DB::table('student')->where('id','>=',2)->get();
+        //pluck
+//        $students = DB::table('student')->pluck('name','age');
+        //lists  已废弃
+//        $students = DB::table('student')->lists('name','age');
+        //select()
+//        $students = DB::table('student')->select('id','name','age')->get();
+//        dd($students);
+        //chunk
+        echo '<pre>';
+        DB::table('student')->orderBy('id','desc')->chunk(2,function($student){
+            var_dump($student->toArray());
+        });
 
     }
 }
