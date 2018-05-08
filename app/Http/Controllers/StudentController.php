@@ -31,7 +31,50 @@ class StudentController extends Controller
 //        $num=DB::update('update student set age= ? where name= ?',['20', 'xgwshen']);
 //        var_dump($num);
         //删除 返回删除的行数
-//        $num = DB::delete('delete from student where id = ?', [1001]);
-//        dd($num);
+        $num = DB::delete('delete from student where id = ?', [1001]);
+        dd($num);
+    }
+
+    /**
+     * 数据库操作 -- 查询构造器
+     * DB::table('表名')->.....
+     */
+
+    public function query1(){
+        //新增数据 一条 返回bool
+//        $bool = DB::table('student')->insert(['name'=>'name1','age'=>18]);
+//        dd($bool);
+        //获取新增的id
+//        $id = DB::table('student')->insertGetId(['name'=>'name2','age'=>30]);
+//        var_dump($id);
+
+        //新增数据 多条
+        DB::table('student')->insert([
+            ['name'=>'name3','age'=>29],
+            ['name'=>'name4','age'=>29],
+        ]);
+
+
+    }
+    /**
+     * 数据库操作 修改数据  自增和自减
+     *
+     */
+    public function query2(){
+        //修改 返回影响行数
+//        $num=DB::table('student')
+//            ->where('id',1003)
+//            ->update(['age'=>19]);
+//        var_dump($num);
+
+        //自增 increment(str,str,array); 1-字段 2-自增数 3-其他字段更新
+//        $num=DB::table('student')->increment('age',3);
+        //自增并修改字段
+//        $num=DB::table('student')->where('id',1003)->increment('age',3,['name'=>'increment']);
+//        var_dump($num);
+
+        //自减
+        $num=DB::table('student')->where('id',1004)->decrement('age',2);
+        var_dump($num);
     }
 }

@@ -100,3 +100,5 @@ Route::get('view', function(){
 Route::get('member/{id}', 'MemberController@info')->where('id','\d+');
 
 Route::any('test1','StudentController@test1');
+Route::any('query1','StudentController@query1');
+Route::any('query2','StudentController@query2');
