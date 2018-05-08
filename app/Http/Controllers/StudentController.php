@@ -77,4 +77,21 @@ class StudentController extends Controller
         $num=DB::table('student')->where('id',1004)->decrement('age',2);
         var_dump($num);
     }
+
+    /**
+     * 使用查询构造器 删除数据
+     * delete 不加条件全删 加条件删部分 返回删除的行数
+     * truncate 全部删除 没有返回值
+     */
+    public function query3(){
+        //delete
+//        $num = DB::table('student')->where('id',1004)->delete();
+//        $num = DB::table('student')->where('id','>',1004)->delete();
+//        var_dump($num);
+
+        //truncate 不返回数据 （NULL）
+        $num= DB::table('student')->truncate();
+        var_dump($num);//NULL
+    }
+
 }
