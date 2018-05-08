@@ -131,13 +131,32 @@ class StudentController extends Controller
     }
 
     /**
-     * 查询构造器中的聚合函数
+     * 查询构造器中的聚合函数 （5ge）
      * count() 统计总数
      * max() 最大值
      * min() 最小值
      * sum() 求和
+     * avg() 平均值
      */
     public function query5(){
+        //count()
+//        $num = DB::table('student')->count();
+//        var_dump($num);
 
+        //max()
+//        $max= DB::table('student')->max('age');
+//        var_dump($max);
+
+        //min()
+//        $min= DB::table('student')->min('age');
+//        var_dump($min);
+
+        //avg
+//        $avg= DB::table('student')->avg('age');
+//        var_dump($avg);
+
+        //sum
+        $sum= DB::table('student')->sum('age');
+        var_dump($sum);
     }
 }
