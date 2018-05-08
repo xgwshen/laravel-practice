@@ -120,10 +120,24 @@ class StudentController extends Controller
 //        $students = DB::table('student')->select('id','name','age')->get();
 //        dd($students);
         //chunk
-        echo '<pre>';
-        DB::table('student')->orderBy('id','desc')->chunk(2,function($student){
-            var_dump($student->toArray());
-        });
+//        echo '<pre>';
+//        DB::table('student')->orderBy('id','desc')->chunk(2,function($student){
+//            var_dump($student->toArray());
+//            if('你的条件'){
+//                return false;//终止查询
+//            }
+//        });
+
+    }
+
+    /**
+     * 查询构造器中的聚合函数
+     * count() 统计总数
+     * max() 最大值
+     * min() 最小值
+     * sum() 求和
+     */
+    public function query5(){
 
     }
 }
