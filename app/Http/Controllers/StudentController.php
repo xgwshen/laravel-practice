@@ -160,4 +160,11 @@ class StudentController extends Controller
         $sum= DB::table('student')->sum('age');
         var_dump($sum);
     }
+
+    /**
+     * eloquent ORM
+     */
+    public function orm1(){
+
+    }
 }
