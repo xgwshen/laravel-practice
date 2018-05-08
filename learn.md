@@ -19,4 +19,5 @@
 2. 继承Illuminate\Database\Eloquent\Model基类
 3. 控制器调用模板 Member::getMember() ..
 ##五、新建数据表与连接数据库
+1. 新建数据库和连接数据库
 
