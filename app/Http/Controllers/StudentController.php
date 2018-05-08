@@ -98,7 +98,7 @@ class StudentController extends Controller
      * 使用查询构造器 查询数据 返回的是对象而不是数组 用toArray方法把对象转化为数组 但是里面的元素还是对象。。。？
      * get() 获取全部数据
      * first() 获取结果集中的第一条
-     * where() 条件 whereRaw('...',['','']) 多个条件
+     * where() 条件 whereRAW('...',['','']) 多个条件
      * pluck() 返回指定字段 5.3以后代替了lists()方法
      * lists() 返回字段与字段组合的数组 5.3以后被废弃了
      * select() 查询指定字段
@@ -110,8 +110,9 @@ class StudentController extends Controller
 //        dd($students);
         //first()
 //        $students = DB::table('student')->orderBy('id','desc')->first();
-        //where
-//        $students = DB::table('student')->where('id','>=',2)->get();
+        //where whereRAW
+        $students = DB::table('student')->whereRAW('id >= ? and age< ?',[2,31])->get();
+        dd($students);
         //pluck
 //        $students = DB::table('student')->pluck('name','age');
         //lists  已废弃
