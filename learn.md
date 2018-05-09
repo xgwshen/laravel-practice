@@ -29,5 +29,6 @@
 1. Blade模板引擎简介及模板继承的使用
    * 模板继承 section / yield / extends / parent
 2. 基础语法及include的使用
+   * 模板中输出php变量
 3. 流程控制
 4. 模板中的url
