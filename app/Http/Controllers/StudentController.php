@@ -8,6 +8,7 @@
 namespace App\Http\Controllers;
 
 use App\Student;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class StudentController extends Controller
@@ -282,6 +283,24 @@ class StudentController extends Controller
      */
     public function urlTest(){
         return "urlTest";
+    }
+
+    /**
+     * request请求
+     */
+    public function request1(Request $request){
+        //1. 取值 input() 加参数取具体值 不加参数去所有值 all() 去所有值
+//        echo $request->input('name');
+//            $res = $request->all();
+//            var_dump($res);
+            //input也可以加默认的值
+//            echo $request->input('sex','未知');//没有sex参数 可以默认
+            //判断有无参数 has() 返回bool值
+//           var_dump($request->has('sex'));
+        //2.判断request请求类型
+         //method() 获取请求类型
+        echo $request->method();
+         //
     }
 
 }

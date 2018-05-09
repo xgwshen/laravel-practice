@@ -44,3 +44,9 @@
    * url() 根据路由的名称生成url
    * action() 根据指定的控制器和方法名生成url
    * route() 根据路由的别名生成url
+# laravel表单篇学习
+##一、 controller介绍
+1. controller 之 Request
+2. Controller 之 Session
+3. Controller 之 Response
+4. Controller 之 Middleware
