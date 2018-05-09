@@ -25,5 +25,9 @@
 4. eloquent orm 查询数据
 5. Eloquent ORM中新增数据、自定义时间戳及批量赋值的使用
 6. Eloquent ORM 删除数据 find() + delete(); destroy(); where()->delete();
-##六、 Blade模板引擎简介及模板继承的使用
-
+##六、 Blade模板引擎
+1. Blade模板引擎简介及模板继承的使用
+   * 模板继承 section / yield / extends / parent
+2. 基础语法及include的使用
+3. 流程控制
+4. 模板中的url
