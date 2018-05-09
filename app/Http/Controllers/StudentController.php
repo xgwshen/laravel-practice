@@ -276,5 +276,12 @@ class StudentController extends Controller
             'arr' => $arr,
             'students'=> $students,
         ]);
-}
+    }
+    /*
+     * 模板中的url
+     */
+    public function urlTest(){
+        return "urlTest";
+    }
+
 }

@@ -34,31 +34,39 @@
     {{--5. include引入子视图--}}
     {{--@include('student.common1',['message'=>'include 传值'])--}}
 
-    <br>
+    {{--<br>--}}
     {{--流程控制--}}
     {{--1. if--}}
-    @if($name == 'xgwshen')
-        xgwshen
-    @else
-        no xgwshen
-    @endif
+    {{--@if($name == 'xgwshen')--}}
+        {{--xgwshen--}}
+    {{--@else--}}
+        {{--no xgwshen--}}
+    {{--@endif--}}
 
+    {{--<br>--}}
+    {{--@unless($name != 'xgwshen')--}}
+        {{--xgwshen--}}
+    {{--@endunless--}}
+    {{--<br>--}}
+    {{--@for( $i=0 ; $i<3 ; $i++)--}}
+        {{--{{$i}}--}}
+    {{--@endfor--}}
+    {{--<br>--}}
+    {{--@foreach( $students as $student)--}}
+        {{--<p>{{ $student->name }}</p>--}}
+    {{--@endforeach--}}
+    {{--<br>--}}
+    {{--@forelse( $students as $student)--}}
+        {{--<p>{{$student->age}}</p>--}}
+    {{--@empty--}}
+        {{--<p>null</p>--}}
+    {{--@endforelse--}}
+
+    {{--模板中的url--}}
     <br>
-    @unless($name != 'xgwshen')
-        xgwshen
-    @endunless
+    <a href="{{ url('urlTest') }}">url() 推荐使用</a>
     <br>
-    @for( $i=0 ; $i<3 ; $i++)
-        {{$i}}
-    @endfor
+    <a href="{{ action('StudentController@urlTest') }}">action()不推荐使用</a>
     <br>
-    @foreach( $students as $student)
-        <p>{{ $student->name }}</p>
-    @endforeach
-    <br>
-    @forelse( $students as $student)
-        <p>{{$student->age}}</p>
-    @empty
-        <p>null</p>
-    @endforelse
+    <a href="{{ route('url') }}">route() 推荐使用</a>
 @stop

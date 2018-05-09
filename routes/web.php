@@ -113,3 +113,5 @@ Route::any('orm3','StudentController@orm3');
 Route::any('orm4','StudentController@orm4');
 //blade模板学习
 Route::any('section1','StudentController@section1');
+//模板中的url 测试 一般都设置别名 便于使用route() 的方式进行url跳转
+ROute::any('urlTest',['as'=>'url','uses'=>'StudentController@urlTest']);

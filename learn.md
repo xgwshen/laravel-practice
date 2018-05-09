@@ -41,3 +41,6 @@
    * for
    * forelse 和foreach类似
 4. 模板中的url
+   * url() 根据路由的名称生成url
+   * action() 根据指定的控制器和方法名生成url
+   * route() 根据路由的别名生成url
