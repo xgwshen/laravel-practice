@@ -107,3 +107,4 @@ Route::any('query4','StudentController@query4');
 Route::any('query5','StudentController@query5');
 Route::any('orm1','StudentController@orm1');
 Route::any('orm2','StudentController@orm2');
+Route::any('orm3','StudentController@orm3');

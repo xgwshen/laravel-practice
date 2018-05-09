@@ -229,5 +229,19 @@ class StudentController extends Controller
         dd($student);
     }
 
+    /**
+     * orm 更新数据
+     */
+    public function orm3(){
+        //使用模型更新 返回bool
+//        $student= Student::find(12);
+//        $student->age = 41;
+//        $bool=  $student->save();
+//        var_dump($bool);
+
+        //批量更新
+        $num  = Student::where('id','>',13)->update(['age'=>29]);
+        var_dump($num);
+    }
 
 }
