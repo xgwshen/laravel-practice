@@ -22,4 +22,16 @@
 {{--content部分--}}
 @section('content')
     this is main space
+    <!--1.模板中输出PHP变量-->
+    <p>{{$name}}</p>
+    {{--2.模板中条用PHP代码--}}
+    <p>{{time()}}--{{date('Y-m-d H:i:s',time())}}</p>
+    <p>{{ in_array($name,$arr) ? 'true' : 'false' }}</p>
+    <p>{{ $name1 or 'default' }}</p>
+    {{--3.原样输出@--}}
+    <p>@{{ $name }}</p>
+    {{--4. 模板中注释--}}
+    {{--5. include引入子视图--}}
+    @include('student.common1',['message'=>'include 传值'])
+
 @stop
