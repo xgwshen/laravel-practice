@@ -267,10 +267,14 @@ class StudentController extends Controller
      * 模板引擎blade
      */
     public function section1(){
+        //查询学生表
+        $students = Student::get();
         $arr=['xgwshen','sean'];
+        //也可以用'student/section1' 推荐使用'.'形式（渲染模板）
         return view('student.section1',[
             'name'=>'xgwshen',
             'arr' => $arr,
-        ]);//也可以用'student/section1' 推荐使用'.'形式（渲染模板）
-    }
+            'students'=> $students,
+        ]);
+}
 }

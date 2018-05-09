@@ -30,5 +30,14 @@
    * 模板继承 section / yield / extends / parent
 2. 基础语法及include的使用
    * 模板中输出php变量
+   * 模板中调用PHP代码
+   * 原样输出
+   * 模板中注释
+   * include 引入子视图
 3. 流程控制
+   * if
+   * unless （if的取返）
+   * foreach
+   * for
+   * forelse 和foreach类似
 4. 模板中的url
