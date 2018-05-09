@@ -239,9 +239,21 @@ class StudentController extends Controller
 //        $bool=  $student->save();
 //        var_dump($bool);
 
-        //批量更新
+        //批量更新 返回条数
         $num  = Student::where('id','>',13)->update(['age'=>29]);
         var_dump($num);
     }
+    /**
+     * orm 删除数据
+     */
+    public function orm4(){
+        //使用模型删除
+//        $student = Student::find(13);
+//        $bool = $student->delete();
+//        var_dump($bool);
+
+        //
+    }
+
 
 }
