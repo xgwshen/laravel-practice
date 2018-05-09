@@ -228,4 +228,6 @@ class StudentController extends Controller
         $student->save();
         dd($student);
     }
+
+
 }
