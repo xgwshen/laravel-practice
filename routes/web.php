@@ -98,14 +98,18 @@ Route::get('view', function(){
 
 // 绑定参数 及参数限制
 Route::get('member/{id}', 'MemberController@info')->where('id','\d+');
-
+//db facade 数据库操作
 Route::any('test1','StudentController@test1');
+//查询构造器数据库操作
 Route::any('query1','StudentController@query1');
 Route::any('query2','StudentController@query2');
 Route::any('query3','StudentController@query3');
 Route::any('query4','StudentController@query4');
 Route::any('query5','StudentController@query5');
+//Eloquent ORM 数据库操作
 Route::any('orm1','StudentController@orm1');
 Route::any('orm2','StudentController@orm2');
 Route::any('orm3','StudentController@orm3');
 Route::any('orm4','StudentController@orm4');
+//blade模板学习
+Route::any('section1','StudentController@section1');

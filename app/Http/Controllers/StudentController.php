@@ -263,5 +263,10 @@ class StudentController extends Controller
 //        var_dump($num);
     }
 
-
+    /**
+     * 模板引擎blade
+     */
+    public function section1(){
+        return view('layout');
+    }
 }
