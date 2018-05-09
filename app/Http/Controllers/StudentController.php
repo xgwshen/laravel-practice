@@ -247,12 +247,19 @@ class StudentController extends Controller
      * orm 删除数据
      */
     public function orm4(){
-        //使用模型删除
+        //使用模型删除 bool
 //        $student = Student::find(13);
 //        $bool = $student->delete();
 //        var_dump($bool);
 
-        //
+        //通过主键删除 destroy (ids:int|array) 条数
+//        $num = Student::destroy(14);//单个删
+//        $num = Student::destroy(15,16);//多个删
+//        $num = Student::destroy([10,11]);//数组形式多个删
+//        var_dump($num);
+        
+        //删除指定条件的数据
+
     }
 
 
