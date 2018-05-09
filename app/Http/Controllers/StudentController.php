@@ -267,6 +267,6 @@ class StudentController extends Controller
      * 模板引擎blade
      */
     public function section1(){
-        return view('layout');
+        return view('student.section1');//也可以用'student/section1' 推荐使用'.'形式（渲染模板）
     }
 }

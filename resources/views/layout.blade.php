@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>@yield('title','laravel')</title>
     <style>
         .header{
             height: 100px;
@@ -43,18 +43,25 @@
 </head>
 <body>
     <div class="header">
+        @section('header')
         头部
+        @show
     </div>
     <div class="main">
         <div class="sidebar">
+            @section('sidebar')
             侧边栏
+            @show
         </div>
         <div class="content">
-            内容区
+            @yield('content','内容区')
+
         </div>
     </div>
     <div class="footer">
+        @section('footer')
         尾部
+        @show
     </div>
 </body>
 </html>
