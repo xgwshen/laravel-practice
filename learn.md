@@ -24,4 +24,6 @@
 3. 查询构造器CURD 聚合函数
 4. eloquent orm 查询数据
 5. Eloquent ORM中新增数据、自定义时间戳及批量赋值的使用
+6. Eloquent ORM 删除数据 find() + delete(); destroy(); where()->delete();
+##六、 Blade模板引擎简介及模板继承的使用
 

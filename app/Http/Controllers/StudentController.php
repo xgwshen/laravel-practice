@@ -257,9 +257,10 @@ class StudentController extends Controller
 //        $num = Student::destroy(15,16);//多个删
 //        $num = Student::destroy([10,11]);//数组形式多个删
 //        var_dump($num);
-        
-        //删除指定条件的数据
 
+        //删除指定条件的数据
+//        $num = Student::where('id','>',9)->delete();
+//        var_dump($num);
     }
 
 
