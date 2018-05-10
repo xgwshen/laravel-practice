@@ -141,4 +141,5 @@ Route::group(['middleware'=>'activity'],function(){
 
 //用户 表单
 Route::get('users/index','UsersController@index');
-Route::get('users/create','UsersController@create');
+Route::any('users/create','UsersController@create');
+Route::post('users/add','UsersController@add');

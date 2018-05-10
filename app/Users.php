@@ -4,7 +4,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Users extends Model
 {
-    protected $table = 'student';
+    protected $table = 'users';
     public $timestamps = true ;
 
     public function getDateFormat()
