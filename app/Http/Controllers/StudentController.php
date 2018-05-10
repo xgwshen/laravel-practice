@@ -299,8 +299,15 @@ class StudentController extends Controller
 //           var_dump($request->has('sex'));
         //2.判断request请求类型
          //method() 获取请求类型
-        echo $request->method();
-         //
+//        echo $request->method();
+         //isMethod() 获取请求类型
+//        $bool = $request->isMethod('post');
+//        var_dump($bool);
+         //判断是否是ajax请求
+//        var_dump($request->ajax()) ;
+         //判断请求的路径是否符合某种格式 is()
+//       $res = $request->is('request1');
+//       var_dump($res);
     }
 
 }
