@@ -61,7 +61,7 @@ class UsersController extends Controller
 //                //数据保持 withInput() 方法把提交信息（$request->input()）保存 在模板中用 old()取到数组信息
 //                return redirect()->back()->withErrors($validator)->withInput();
 //            }
-            
+
             $data= $request->input('Student');
 //        var_dump($data);
             $users = new Users();

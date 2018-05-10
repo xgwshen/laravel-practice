@@ -23,13 +23,7 @@
                 <td>{{$student->name}}</td>
                 <td>{{$student->age}}</td>
                 <td>
-                    @if($student->sex=='10')
-                        未知
-                    @elseif($student->sex=='20')
-                        男
-                    @else
-                        女
-                    @endif
+                   {{$student->sex($student->sex)}}
                 </td>
                 <td>{{date('Y-m-d H:i:s',$student->updated_at)}}</td>
                 <td>
