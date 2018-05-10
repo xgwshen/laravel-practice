@@ -119,6 +119,8 @@ Route::any('urlTest',['as'=>'url','uses'=>'StudentController@urlTest']);
 //request
 Route::any('request1','StudentController@request1');
 
-//session
-Route::any('session1',['uses'=>'StudentController@session1']);
-Route::any('session2',['uses'=>'StudentController@session2']);
+//session 没用中间件路由也成功了啊。。。
+Route::group(['middleware'=>'web'],function(){
+    Route::any('session1',['uses'=>'StudentController@session1']);
+    Route::any('session2',['uses'=>'StudentController@session2']);
+});

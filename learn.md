@@ -47,6 +47,15 @@
 # laravel表单篇学习
 ##一、 controller介绍
 1. controller 之 Request
+    * input() all() method() isMethod() is()
 2. Controller 之 Session
+    * 存值 put(str|array)-存字符串 push()-存数组 flash()-一次性存
+    * 取值 get() pull()-取后删除 all()
+    * 判断 has()
+    * 删值 forget()单删 flush()全删
 3. Controller 之 Response
+    * 字符串 echo dd() var_dump
+    * 视图 view('path',['key'=>'value'])
+    * json Response->json()
+    * 重定向
 4. Controller 之 Middleware
