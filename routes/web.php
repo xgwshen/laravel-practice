@@ -137,3 +137,8 @@ Route::any('activity0','StudentController@activity0');
 Route::group(['middleware'=>'activity'],function(){
     Route::any('activity1','StudentController@activity1');
 });
+
+
+//用户 表单
+Route::get('users/index','UsersController@index');
+Route::get('users/create','UsersController@create');
