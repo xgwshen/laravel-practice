@@ -387,7 +387,20 @@ class StudentController extends Controller
 ////            return redirect()->route('session2')->with('message','ssss');
 //        }else{
 //            return '到此为止吧';
-        }
+//        }
+    }
+
+    /**
+     * 中间件 过滤http请求的作用
+     * 有下面一个场景
+     * 活动在开始时间之前进入活动宣传页面
+     * 活动开始后进入活动页面
+     */
+    public function activity0(){
+        return '活动宣传页面';
+    }
+    public function activity1(){
+        return '活动已经开始啦！';
     }
 
 }

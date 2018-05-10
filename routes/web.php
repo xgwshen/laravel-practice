@@ -130,3 +130,10 @@ Route::group(['middleware'=>'web'],function(){
 
 //response
 Route::any('response',['uses'=>'StudentController@response']);
+
+//活动宣传页面
+Route::any('activity0','StudentController@activity0');
+//使用中间件
+Route::group(['middleware'=>'activity'],function(){
+    Route::any('activity1','StudentController@activity1');
+});

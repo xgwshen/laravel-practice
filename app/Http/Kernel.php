@@ -10,7 +10,7 @@ class Kernel extends HttpKernel
      * The application's global HTTP middleware stack.
      *
      * These middleware are run during every request to your application.
-     *
+     * 这些中间件是在对应用程序的每次请求中运行的。
      * @var array
      */
     protected $middleware = [
@@ -22,7 +22,7 @@ class Kernel extends HttpKernel
 
     /**
      * The application's route middleware groups.
-     *
+     * web 应用程序的路由中间件组。
      * @var array
      */
     protected $middlewareGroups = [
@@ -46,7 +46,7 @@ class Kernel extends HttpKernel
      * The application's route middleware.
      *
      * These middleware may be assigned to groups or used individually.
-     *
+     * 这些中间件可以被分配给组或单独使用
      * @var array
      */
     protected $routeMiddleware = [
@@ -56,5 +56,7 @@ class Kernel extends HttpKernel
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+        //注册活动中间件
+        'activity' => \App\Http\Middleware\Activity::class,
     ];
 }
