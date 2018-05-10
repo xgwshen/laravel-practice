@@ -10,6 +10,7 @@ namespace App\Http\Controllers;
 use App\Student;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 
 class StudentController extends Controller
 {
@@ -318,15 +319,46 @@ class StudentController extends Controller
      */
     public function session1(Request $request){
         //1. HTTP request session
-        $request->session()->put('key1','value1');
+//        $request->session()->put('key1','value1');
         //2. session() 辅助函数
-        session()->put('key2','value2');
+//        session()->put('key2','value2');
+        //3. session类
+//        Session::put('key3','value3');
+        //以数组的形式一次性存多个session
+        Session::put(['key4'=>'value4','key5'=>'value5']);
+        //把数组放到session的数组中
+        Session::push('student','xgwshen1');
+        Session::push('student','xgwshen2');
+        //暂存session值 第一次访问有 第二次就没了 flash
+        Session::flash('key-flash','val-flash');
     }
     public function session2(Request $request){
         //1. 获取 HTTP request session
 //        echo $request->session()->get('key1');
         //2. 获取 session() 辅助函数
-        echo session()->get('key2');
+//        echo session()->get('key2');
+        //3. 获取session类
+//        echo Session::get('key3');
+        //不存在则取默认值 但不存到session中
+//        echo Session::get('key5','default');
+
+        //去数组的session
+//        var_dump(Session::get('student'));
+        //取出数据并删除
+//        echo Session::pull('key4','default');
+        //取出所有制
+//        dd(Session::all());
+        //判断session中是否有某值 has()
+//        var_dump(Session::has('key1')) ;
+
+        //删除session中的值
+//        Session::forget('key1');
+        //清空session信息
+//        Session::flush();
+//        dd(Session::all());
+
+        echo Session::get('key-flash');
     }
+
 
 }
