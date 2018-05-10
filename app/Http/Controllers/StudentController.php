@@ -9,6 +9,7 @@ namespace App\Http\Controllers;
 
 use App\Student;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 
@@ -357,8 +358,36 @@ class StudentController extends Controller
 //        Session::flush();
 //        dd(Session::all());
 
-        echo Session::get('key-flash');
+//        echo Session::get('key-flash');
+//        return redirect()->back();
     }
 
+    /**
+     * response 返回都是用 return
+     */
+    public function response(Request $request){
+        //json
+//        $data = [
+//            'errCode' => 'false',
+//            'Msg'   => '错误'
+//        ];
+//        return response()->json($data);
+
+        //重定向
+//        return redirect('session2');
+//        return redirect('session2')->with('message','我是快闪数据');//message是用Session::flash()暂存的
+
+//        return redirect()->action('StudentController@session2')->with('message','我是快闪数据');
+
+//        return redirect()->route('session2')->with('message','ssss');
+        //回到上一个页面
+//        return redirect()->back();
+
+//        if($request->is('response')){
+////            return redirect()->route('session2')->with('message','ssss');
+//        }else{
+//            return '到此为止吧';
+        }
+    }
 
 }

@@ -59,3 +59,5 @@
     * json Response->json()
     * 重定向
 4. Controller 之 Middleware
+    * 过滤HTTP请求的作用
+    
