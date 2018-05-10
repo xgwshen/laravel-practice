@@ -310,4 +310,23 @@ class StudentController extends Controller
 //       var_dump($res);
     }
 
+    /**
+     * session的使用
+     * HTTP request session()方法
+     * session()辅助函数
+     * Session:: 类
+     */
+    public function session1(Request $request){
+        //1. HTTP request session
+        $request->session()->put('key1','value1');
+        //2. session() 辅助函数
+        session()->put('key2','value2');
+    }
+    public function session2(Request $request){
+        //1. 获取 HTTP request session
+//        echo $request->session()->get('key1');
+        //2. 获取 session() 辅助函数
+        echo session()->get('key2');
+    }
+
 }

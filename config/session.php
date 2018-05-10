@@ -4,11 +4,13 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Default Session Driver
+    | Default Session Driver 默认session 驱动
     |--------------------------------------------------------------------------
     |
     | This option controls the default session "driver" that will be used on
+        此选型控制请求里默认的session驱动
     | requests. By default, we will use the lightweight native driver but
+        默认上 ，我们使用轻量级的本地驱动程序 你也可以指定其他下面提供的更好的程序驱动
     | you may specify any of the other wonderful drivers provided here.
     |
     | Supported: "file", "cookie", "database", "apc",
@@ -20,7 +22,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Session Lifetime
+    | Session Lifetime 回话生存周期
     |--------------------------------------------------------------------------
     |
     | Here you may specify the number of minutes that you wish the session
@@ -35,7 +37,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Session Encryption
+    | Session Encryption 回话加密
     |--------------------------------------------------------------------------
     |
     | This option allows you to easily specify that all of your session data
@@ -48,7 +50,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Session File Location
+    | Session File Location 会话文件位置
     |--------------------------------------------------------------------------
     |
     | When using the native session driver, we need a location where session
@@ -61,7 +63,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Session Database Connection
+    | Session Database Connection 数据库会话连接
     |--------------------------------------------------------------------------
     |
     | When using the "database" or "redis" session drivers, you may specify a
@@ -74,7 +76,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Session Database Table
+    | Session Database Table 回话数据库表
     |--------------------------------------------------------------------------
     |
     | When using the "database" session driver, you may specify the table we
@@ -87,7 +89,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Session Cache Store
+    | Session Cache Store 会话缓存存储
     |--------------------------------------------------------------------------
     |
     | When using the "apc" or "memcached" session drivers, you may specify a
@@ -107,13 +109,15 @@ return [
     | rid of old sessions from storage. Here are the chances that it will
     | happen on a given request. By default, the odds are 2 out of 100.
     |
+        一些会话驱动程序必须手动扫描它们的存储位置以摆脱存储中的旧会话。
+        这是在给定的请求下会发生的机会。默认情况下，100的几率是2。
     */
 
     'lottery' => [2, 100],
 
     /*
     |--------------------------------------------------------------------------
-    | Session Cookie Name
+    | Session Cookie Name     Cookie Name会议
     |--------------------------------------------------------------------------
     |
     | Here you may change the name of the cookie used to identify a session
@@ -126,7 +130,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Session Cookie Path
+    | Session Cookie Path 路径
     |--------------------------------------------------------------------------
     |
     | The session cookie path determines the path for which the cookie will
@@ -139,7 +143,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Session Cookie Domain
+    | Session Cookie Domain 领域
     |--------------------------------------------------------------------------
     |
     | Here you may change the domain of the cookie used to identify a session
