@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use App\Users;
 use Illuminate\Http\Request;
 
@@ -91,6 +92,43 @@ class UsersController extends Controller
             return redirect('users/index');
         }else{
             return redirect()->back();
+        }
+    }
+
+    public function update(Request $request, $id){
+        $student = Users::find($id);
+        if($request->isMethod('POST')){
+            $this->validate($request,[
+                'Student.name'=>'required|max:20',
+                'Student.age' => 'required|integer',
+                'Student.sex' => 'required'
+            ],[
+                'required'=> ':attribute 为必填项',
+                'integer'=> ':attribute 为整数',
+                'max'=> ':attribute 长度不符合要求'
+            ],[
+                'Student.name'=>'姓名',
+                'Student.age'=>'年龄',
+                'Student.sex'=>'性别',
+            ]);
+            //获取数据
+            $data = $request->input('Student');
+            $student->name = $data['name'];
+            $student->age = $data['age'];
+            $student->sex = $data['sex'];
+            if($student->save()){
+                return redirect('users/index')->with('success','修改成功-' .$id);
+            }
+        }
+        return view('users.update',[
+            'student' => $student,
+        ]);
+    }
+
+    public function delete($id){
+        $num = User::destroy($id);
+        if($num){
+            return redirect("users/index")->with('success','删除成功');
         }
     }
 }

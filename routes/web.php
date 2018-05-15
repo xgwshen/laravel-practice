@@ -143,3 +143,5 @@ Route::group(['middleware'=>'activity'],function(){
 Route::get('users/index','UsersController@index');
 Route::any('users/create','UsersController@create');
 Route::post('users/add','UsersController@add');
+Route::any('users/update/{id}','UsersController@update');
+Route::get('users/delete/{id}','UsersController@delete');
