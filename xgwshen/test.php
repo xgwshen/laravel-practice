@@ -8,11 +8,18 @@
  */
 class my{
     private $m;
-    pulic function __construct($param)
-{
-    $this->m=$param;
-}
+    public function __construct($param)
+    {
+        $this->m=$param;
+    }
     public function toEat(){
         echo 'eat is function';
     }
+    public function randfuc(){
+        echo rand(1,100000);
+    }
+
 }
+
+$my = new my(6);
+echo $my->randfuc();
