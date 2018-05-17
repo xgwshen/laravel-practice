@@ -145,3 +145,6 @@ Route::any('users/create','UsersController@create');
 Route::post('users/add','UsersController@add');
 Route::any('users/update/{id}','UsersController@update');
 Route::get('users/delete/{id}','UsersController@delete');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
