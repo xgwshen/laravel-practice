@@ -18,6 +18,9 @@ class my{
     public function randfuc(){
         echo rand(1,100000);
     }
+    public function render(){
+        $this->getss();
+    }
 
 }
 
